@@ -43,7 +43,7 @@ public class DepartmentController {
 
     //creating post mapping that save the department detail in the database
     @PostMapping("/saveDepartment")
-    private ResponseEntity<StatusDTO> saveDepartment(@ModelAttribute DepartmentDTO departmentDTO) {
+    private ResponseEntity<StatusDTO> saveDepartment(@RequestBody DepartmentDTO departmentDTO) {
         try {
             DepartmentBean departmentBean = DepartmentTransformer.getDepartmentBeanFromDTO(departmentDTO);
             DepartmentBean department = departmentService.saveDepartment(departmentBean);
