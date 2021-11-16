@@ -26,8 +26,8 @@ public class DepartmentServiceImpl implements DepartmentService {
 
     @Override
     public DepartmentBean updateDepartment(DepartmentBean departmentBean) {
-        if (departmentBean.getDepartmentId() != null) {
-            Optional<DepartmentBean> persisted = departmentRepository.findById(departmentBean.getDepartmentId());
+        if (departmentBean.getId() != null) {
+            Optional<DepartmentBean> persisted = departmentRepository.findById(departmentBean.getId());
             if (persisted == null) {
                 return null;
             }
@@ -39,7 +39,7 @@ public class DepartmentServiceImpl implements DepartmentService {
 
     @Override
     public DepartmentBean deleteDepartment(DepartmentBean departmentBean) {
-        if (departmentBean.getDepartmentId() != null) {
+        if (departmentBean.getId() != null) {
             departmentRepository.delete(departmentBean);
             return departmentBean;
         }

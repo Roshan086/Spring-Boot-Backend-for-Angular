@@ -9,19 +9,19 @@ public class DepartmentBean {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "department_id")
-    private Long departmentId;
+    private Long id;
     @Column(name = "deparmtnet_name")
     private String departmentName;
     @Column(name = "manager_id")
     private Integer managerId;
 
 
-    public Long getDepartmentId() {
-        return departmentId;
+    public Long getId() {
+        return id;
     }
 
-    public void setDepartmentId(Long departmentId) {
-        this.departmentId = departmentId;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getDepartmentName() {

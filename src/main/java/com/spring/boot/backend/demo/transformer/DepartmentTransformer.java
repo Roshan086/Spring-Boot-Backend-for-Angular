@@ -12,7 +12,7 @@ public class DepartmentTransformer {
     public static DepartmentBean getDepartmentBeanFromDTO(DepartmentDTO departmentDTO) {
         DepartmentBean departmentBean = new DepartmentBean();
         if (departmentDTO.getId() != null && !departmentDTO.getId().equals("")) {
-            departmentBean.setDepartmentId(Long.parseLong(departmentDTO.getId()));
+            departmentBean.setId(Long.parseLong(departmentDTO.getId()));
         }
         if (departmentDTO.getDepartmentName() != null && !departmentDTO.getDepartmentName().equals("")) {
             departmentBean.setDepartmentName(departmentDTO.getDepartmentName());
@@ -26,8 +26,8 @@ public class DepartmentTransformer {
 
     public static DepartmentDTO getDepartmentDTOFromBean(DepartmentBean departmentBean) {
         DepartmentDTO departmentDTO = new DepartmentDTO();
-        if (departmentBean.getDepartmentId() != null && !departmentBean.getDepartmentId().equals("")) {
-            departmentDTO.setId(departmentBean.getDepartmentId().toString());
+        if (departmentBean.getId() != null && !departmentBean.getId().equals("")) {
+            departmentDTO.setId(departmentBean.getId().toString());
         }
         if (departmentBean.getDepartmentName() != null && !departmentBean.getDepartmentName().equals("")) {
             departmentDTO.setDepartmentName(departmentBean.getDepartmentName());
