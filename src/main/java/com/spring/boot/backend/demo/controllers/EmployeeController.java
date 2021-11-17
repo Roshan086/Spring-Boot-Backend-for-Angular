@@ -39,7 +39,7 @@ public class EmployeeController {
     public PageDTO getAll(@ModelAttribute PaginationUtil paginationUtil) {
         Map<String, String> params = new HashMap<>();
         params.put("page", paginationUtil.getCurrentPage().toString());
-        params.put("itemsPerPage", paginationUtil.getItemsPerPages().toString());
+        params.put("itemsPerPage", paginationUtil.getItemsPerPage().toString());
         params.put("sortBy", paginationUtil.getSortBy());
         params.put("direction", paginationUtil.getDirection());
         Page<EmployeeBean> page = employeeService.findAllByFilterWithPaging(Utility.createPageRequest(params));

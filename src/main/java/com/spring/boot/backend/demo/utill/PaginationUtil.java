@@ -19,7 +19,7 @@ public class PaginationUtil {
     @NotNull(message = "Items per Pages can not be Null")
     @NotBlank(message = "Items per Pages can not be blank")
     @ApiModelProperty(value = "Items per Pages", notes = "Items per Pages can not be Null", required = true)
-    private Integer itemsPerPages;
+    private Integer itemsPerPage;
 
     @NotNull(message = "Sort By can not be Null")
     @NotBlank(message = "Sort By can not be blank")
@@ -40,7 +40,7 @@ public class PaginationUtil {
     public String toString() {
         return "PaginationUtil{" +
                 "currentPage=" + currentPage +
-                ", itemsPerPages=" + itemsPerPages +
+                ", itemsPerPages=" + itemsPerPage +
                 ", sortBy='" + sortBy + '\'' +
                 ", direction='" + direction + '\'' +
                 '}';
@@ -54,12 +54,12 @@ public class PaginationUtil {
         this.currentPage = currentPage;
     }
 
-    public Integer getItemsPerPages() {
-        return itemsPerPages;
+    public Integer getItemsPerPage() {
+        return itemsPerPage;
     }
 
-    public void setItemsPerPages(Integer itemsPerPages) {
-        this.itemsPerPages = itemsPerPages;
+    public void setItemsPerPage(Integer itemsPerPage) {
+        this.itemsPerPage = itemsPerPage;
     }
 
     public String getSortBy() {

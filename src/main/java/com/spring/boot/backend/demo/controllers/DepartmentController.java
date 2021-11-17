@@ -34,7 +34,7 @@ public class DepartmentController {
         Map<String, String> params = new HashMap<>();
         System.out.println(paginationUtil.toString());
         params.put("page", paginationUtil.getCurrentPage().toString());
-        params.put("itemsPerPage", paginationUtil.getItemsPerPages().toString());
+        params.put("itemsPerPage", paginationUtil.getItemsPerPage().toString());
         params.put("sortBy", paginationUtil.getSortBy());
         params.put("direction", paginationUtil.getDirection());
         Page<DepartmentBean> page = departmentService.findAllByFilterWithPaging(Utility.createPageRequest(params));
