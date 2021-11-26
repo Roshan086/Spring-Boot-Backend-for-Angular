@@ -59,7 +59,7 @@ public class DepartmentController {
             @ApiImplicitParam(name = "id", value = "Department Id ", readOnly = true, dataType = "string", paramType = "query", required = true),
     })
     @PostMapping("/updateDepartment")
-    private ResponseEntity<StatusDTO> updateDepartment(@ModelAttribute DepartmentDTO departmentDTO) {
+    private ResponseEntity<StatusDTO> updateDepartment(@RequestBody DepartmentDTO departmentDTO) {
         try {
 
             DepartmentBean departmentBean = departmentService.findById(Long.parseLong(departmentDTO.getId()));
